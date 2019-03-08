@@ -19,10 +19,10 @@ export default class EmployeeList extends React.Component {
     renderList() {
         return this.props.employeeList.map(employee => {
             return (
-                <div class="col-xl-2" style={componentStyling.containerDiv}>
+                <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12" style={componentStyling.containerDiv} key={employee.id}>
                     <div style={componentStyling.innerDiv}>
-                        <img style={componentStyling.userImg} src={employee.avatar} /><br></br><br></br>
-                        <EmployeeDetails employee={employee} />
+                        <img style={componentStyling.userImg} src={employee.avatar} alt="User"/><br></br><br></br>
+                        <EmployeeDetails employee={employee} deleteEmployee={this.props.deleteEmployee} />
                     </div>
                 </div>
             )
@@ -30,7 +30,7 @@ export default class EmployeeList extends React.Component {
     }
     render() {
         return (
-            <div class="row">
+            <div className="row">
                 {this.renderList()}
             </div>
         )
