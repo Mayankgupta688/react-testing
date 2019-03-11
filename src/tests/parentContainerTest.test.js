@@ -1,11 +1,9 @@
 import "./setupTests";
-
-;import ReactDOM from "react-dom";
-import React from "react";
 import { shallow, mount, render } from 'enzyme';
+import React, { Component } from 'react';
+import ReactDOM from "react-dom";
 
 import ParentComponent from "../container/parentContainer";
-import EmployeeList from "../components/employeeList"
 
 describe("parentContainer", function() {
 
@@ -18,6 +16,7 @@ describe("parentContainer", function() {
 });
 
 describe("Testing Component with Shallow Rendering", function() {
+
     it("should display Parent Component", function() {
 
         // Here We are using Shallow Rendering to check for the elements
