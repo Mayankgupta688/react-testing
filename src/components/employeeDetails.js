@@ -14,9 +14,9 @@ export default class EmployeeDetails extends React.Component {
             <div>
                 <div>
                     <h5>User Id: {employeeDetails.id}</h5>
-                    <label>User Name: {employeeDetails.name}</label>
+                    <b className="user_name">User Name: {employeeDetails.name}</b>
                     <label>Employee Created On: {employeeDetails.createdAt}</label>
-                    <input type="button" style={componentStyling.deleteButton} value="Delete" onClick={(id) => this.props.deleteEmployee(employeeDetails.id)} />
+                    <button style={componentStyling.deleteButton} value="Delete" onClick={(id) => this.props.deleteEmployee(employeeDetails.id)} />
                 </div>
             </div>
         )
