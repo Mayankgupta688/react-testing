@@ -84,7 +84,7 @@ export default class ParentContainer extends Component {
         </div><br></br>
 
         <div className="row">
-          <input type="text" value={this.state.filterText} onChange={(e) => this.filterData(e)} placeholder="Enter Employee Name" style={componenStyling.searchInput} />
+          <input id="filterText" type="text" value={this.state.filterText} onChange={(e) => this.filterData(e)} placeholder="Enter Employee Name" style={componenStyling.searchInput} />
         </div>
 
         <EmployeeList employeeList={this.state.filterData} deleteEmployee={this.deleteEmployee} />

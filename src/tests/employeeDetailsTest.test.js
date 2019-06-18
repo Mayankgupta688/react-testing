@@ -8,7 +8,7 @@ import EmployeeDetails from "../components/employeeDetails";
 
 describe("Test Employee Details Container", function() {
 
-    it("will validate if the delete function is called", function() {
+    it("will validate if the delete button is called", function() {
 
         const mockCallback = jest.fn();
 
@@ -22,8 +22,8 @@ describe("Test Employee Details Container", function() {
 
         expect(employeeListComponent.find("b").text()).toBe("User Name: Ms. Gaylord Streich");
 
-        employeeListComponent.find("button").simulate("click");
+        employeeListComponent.find("button").simulate("click").simulate("click");
 
-        expect(mockCallback.mock.calls.length).toBe(1);
+        expect(mockCallback.mock.calls.length).toBe(2);
     })
 });

@@ -1,7 +1,6 @@
 import "./setupTests";
-import { shallow, mount, render } from 'enzyme';
-import React, { Component } from 'react';
-import ReactDOM from "react-dom";
+import { shallow } from 'enzyme';
+import React from 'react';
 
 import employeeData from "../data/employeeData";
 import EmployeeList from "../components/employeeList";
@@ -17,6 +16,8 @@ describe("Test EmployeeList Container", function() {
 
         var employeeDetailsContainer = employeeListComponent.find("EmployeeDetails");
 
-        expect(employeeDetailsContainer.length).toBe(employeeData.length)
+        expect(employeeDetailsContainer.length).toBe(employeeData.length);
+
+        expect(employeeListComponent.find("img").length).toBe(employeeData.length);
     });
 });
